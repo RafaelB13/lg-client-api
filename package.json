@@ -2,9 +2,11 @@
   "name": "lg-api-client",
   "version": "1.0.0",
   "description": "A lightweight and fully typed SDK for interacting with the LG SmartThinQ / LG Developers API.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsup src/index.ts --dts --format esm,cjs --outDir dist"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/RafaelB13/lg-client-api/issues"
   },
-  "homepage": "https://github.com/RafaelB13/lg-client-api#readme"
+  "homepage": "https://github.com/RafaelB13/lg-client-api#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.20",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  }
 }

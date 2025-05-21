@@ -25,11 +25,11 @@ export class HttpClient {
     private axiosInstance: AxiosInstance;
 
     constructor(config: ApiConfig) {
-        const { baseURL, defaulConfig } = config
+        const { baseURL, defaultConfig } = config
 
         this.axiosInstance = axios.create({
             baseURL,
-            ...defaulConfig
+            ...defaultConfig
         });
     }
 

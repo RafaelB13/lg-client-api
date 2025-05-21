@@ -3,7 +3,7 @@ import axios from "axios";
 
 interface ApiConfig {
     baseURL: string;
-    defaulConfig?: AxiosRequestConfig;
+    defaultConfig?: AxiosRequestConfig;
 }
 
 interface ApiResponse<T> {

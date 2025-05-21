@@ -6,7 +6,7 @@ export class LGApiClient {
     private readonly deviceList: IGetDeviceList;
 
     constructor() {
-        const deviceRepository = new LGDeviceRepository
+        const deviceRepository = new LGDeviceRepository()
         this.deviceList = new GetDeviceList(deviceRepository)
     }
 
